@@ -1,0 +1,37 @@
+@keyframes float3D {
+  0% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotateX(6deg) rotateY(-6deg);
+  }
+  100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.logo-3d-layer {
+  animation: float3D 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hologram-scan {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(31, 59, 115, 0.15),
+    transparent
+  );
+  animation: scanMove 2.5s linear infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes scanMove {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
